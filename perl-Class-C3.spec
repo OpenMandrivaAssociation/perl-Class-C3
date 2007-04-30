@@ -1,10 +1,8 @@
 %define module	Class-C3
 %define	modprefix Class
 
-%define version	0.13
-
-%define	rel	1
-%define release	%mkrel %{rel}
+%define version	0.15_05
+%define release	%mkrel 1
 
 Summary:	A pragma to use the C3 method resolution order algortihm
 Name:		perl-%{module}
