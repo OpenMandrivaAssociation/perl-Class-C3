@@ -12,7 +12,6 @@ License:	Artistic/GPL
 Group:		Development/Perl
 Source0:	ftp://ftp.perl.org/pub/CPAN/modules/by-module/%{modprefix}/%{module}-%{version}.tar.bz2
 Url:		http://search.cpan.org/dist/%{module}/
-BuildRoot:	%{_tmppath}/%{name}-buildroot
 %if %{mdkversion} < 1010
 BuildRequires:	perl-devel
 %endif
@@ -20,7 +19,9 @@ BuildRequires:	perl(Algorithm::C3) >= 0.05
 BuildRequires:	perl(Scalar::Util) >= 1.10
 BuildRequires:	perl(Test::More) >= 0.47
 BuildRequires:	perl(Test::Exception) >= 0.15
+BuildRequires:	perl(Class::C3::XS) >= 0.07
 BuildArch:	noarch
+BuildRoot:	%{_tmppath}/%{name}-%{version}
 
 %description
 This is pragma to change Perl 5's standard method resolution order
