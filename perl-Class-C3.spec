@@ -1,8 +1,7 @@
 %define module	Class-C3
 %define	modprefix Class
-
 %define version	0.19
-%define release	%mkrel 1
+%define release	%mkrel 2
 
 Summary:	A pragma to use the C3 method resolution order algortihm
 Name:		perl-%{module}
@@ -20,6 +19,7 @@ BuildRequires:	perl(Scalar::Util) >= 1.10
 BuildRequires:	perl(Test::More) >= 0.47
 BuildRequires:	perl(Test::Exception) >= 0.15
 BuildRequires:	perl(Class::C3::XS) >= 0.07
+Requires:	    perl(Algorithm::C3)
 BuildArch:	noarch
 BuildRoot:	%{_tmppath}/%{name}-%{version}
 
