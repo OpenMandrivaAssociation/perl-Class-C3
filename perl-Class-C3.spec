@@ -21,6 +21,7 @@ BuildRequires:	perl(Test::Exception) >= 0.15
 BuildRequires:	perl(Class::C3::XS) >= 0.07
 Requires:	    perl(Algorithm::C3)
 BuildArch:	noarch
+BuildRoot:	%{_tmppath}/%{name}-%{version}
 
 %description
 This is pragma to change Perl 5's standard method resolution order
