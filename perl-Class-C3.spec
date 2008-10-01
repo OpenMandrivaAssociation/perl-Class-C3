@@ -1,7 +1,7 @@
 %define module	Class-C3
 %define	modprefix Class
 %define version	0.19
-%define release	%mkrel 4
+%define release	%mkrel 5
 
 Summary:	A pragma to use the C3 method resolution order algortihm
 Name:		perl-%{module}
@@ -21,7 +21,7 @@ BuildRequires:	perl(Test::Exception) >= 0.15
 BuildRequires:	perl(Class::C3::XS) >= 0.07
 Requires:	    perl(Algorithm::C3)
 BuildArch:	noarch
-BuildRoot:	%{_tmppath}/%{name}-%{version}
+BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
 %description
 This is pragma to change Perl 5's standard method resolution order
