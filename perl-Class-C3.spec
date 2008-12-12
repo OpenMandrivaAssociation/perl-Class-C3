@@ -1,19 +1,16 @@
 %define module	Class-C3
 %define	modprefix Class
-%define version	0.19
-%define release	%mkrel 5
+%define version	0.20
+%define release	%mkrel 1
 
-Summary:	A pragma to use the C3 method resolution order algortihm
 Name:		perl-%{module}
 Version:	%{version}
 Release:	%{release}
+Summary:	A pragma to use the C3 method resolution order algortihm
 License:	Artistic/GPL
 Group:		Development/Perl
-Source0:	ftp://ftp.perl.org/pub/CPAN/modules/by-module/%{modprefix}/%{module}-%{version}.tar.bz2
 Url:		http://search.cpan.org/dist/%{module}/
-%if %{mdkversion} < 1010
-BuildRequires:	perl-devel
-%endif
+Source0:	http://www.cpan.org/modules/by-module/Class/%{module}-%{version}.tar.gz
 BuildRequires:	perl(Algorithm::C3) >= 0.05
 BuildRequires:	perl(Scalar::Util) >= 1.10
 BuildRequires:	perl(Test::More) >= 0.47
@@ -21,7 +18,7 @@ BuildRequires:	perl(Test::Exception) >= 0.15
 BuildRequires:	perl(Class::C3::XS) >= 0.07
 Requires:	    perl(Algorithm::C3)
 BuildArch:	noarch
-BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
+BuildRoot:	%{_tmppath}/%{name}-%{version}
 
 %description
 This is pragma to change Perl 5's standard method resolution order
@@ -47,7 +44,7 @@ rm -rf %{buildroot}
 rm -rf %{buildroot}
 
 %files
-%defattr(644,root,root,755)
+%defattr(-,root,root)
 %doc ChangeLog README
 %{_mandir}/man*/*
 %{perl_vendorlib}/%{modprefix}
