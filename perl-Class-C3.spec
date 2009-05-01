@@ -1,6 +1,6 @@
 %define module	Class-C3
 %define	modprefix Class
-%define version	0.20
+%define version	0.21
 %define release	%mkrel 1
 
 Name:		perl-%{module}
