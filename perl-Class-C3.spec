@@ -4,7 +4,7 @@
 Summary:	A pragma to use the C3 method resolution order algortihm
 Name:		perl-%{upstream_name}
 Version:	%perl_convert_version %{upstream_version}
-Release:	7
+Release:	8
 License:	Artistic/GPLv2
 Group:		Development/Perl
 Url:		http://search.cpan.org/dist/%{upstream_name}/
