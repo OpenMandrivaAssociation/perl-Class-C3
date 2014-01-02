@@ -1,14 +1,14 @@
 %define upstream_name	 Class-C3
-%define upstream_version 0.23
+%define upstream_version 0.24
 
 Summary:	A pragma to use the C3 method resolution order algortihm
 Name:		perl-%{upstream_name}
 Version:	%perl_convert_version %{upstream_version}
-Release:	11
+Release:	1
 License:	Artistic/GPLv2
 Group:		Development/Perl
 Url:		http://search.cpan.org/dist/%{upstream_name}/
-Source0:	http://www.cpan.org/modules/by-module/Class/%{upstream_name}-%{upstream_version}.tar.gz
+Source0:	http://www.cpan.org/modules/by-module/Class/Class-C3-%{upstream_version}.tar.gz
 BuildArch:	noarch
 BuildRequires:	perl-devel
 BuildRequires:	perl(Algorithm::C3) >= 0.05
@@ -40,4 +40,5 @@ sophisticated C3 method resolution order.
 %doc ChangeLog README
 %{perl_vendorlib}/Class
 %{_mandir}/man3/*
+
 
