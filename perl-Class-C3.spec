@@ -1,5 +1,5 @@
 %define upstream_name	 Class-C3
-%define upstream_version 0.24
+%define upstream_version 0.25
 
 Summary:	A pragma to use the C3 method resolution order algortihm
 Name:		perl-%{upstream_name}
@@ -40,5 +40,6 @@ sophisticated C3 method resolution order.
 %doc ChangeLog README
 %{perl_vendorlib}/Class
 %{_mandir}/man3/*
+
 
 
