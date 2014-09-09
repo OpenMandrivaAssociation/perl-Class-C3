@@ -37,6 +37,6 @@ sophisticated C3 method resolution order.
 %makeinstall_std
 
 %files
-%doc ChangeLog README
+%doc  README
 %{perl_vendorlib}/Class
 %{_mandir}/man3/*
