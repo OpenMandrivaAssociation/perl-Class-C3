@@ -7,7 +7,7 @@ Version:	%perl_convert_version %{upstream_version}
 Release:	3
 License:	Artistic/GPLv2
 Group:		Development/Perl
-Url:		http://metacpan.org/pod/Class::C3
+Url:		https://metacpan.org/pod/Class::C3
 Source0:	http://www.cpan.org/modules/by-module/Class/%{upstream_name}-%{upstream_version}.tar.gz
 BuildArch:	noarch
 BuildRequires:	perl-devel
