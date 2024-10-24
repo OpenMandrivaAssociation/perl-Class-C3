@@ -1,21 +1,20 @@
 %define upstream_name	 Class-C3
-%define upstream_version 0.35
 
 Summary:	A pragma to use the C3 method resolution order algortihm
 Name:		perl-%{upstream_name}
-Version:	%perl_convert_version %{upstream_version}
-Release:	4
+Version:	0.35
+Release:	1
 License:	Artistic/GPLv2
 Group:		Development/Perl
 Url:		https://metacpan.org/pod/Class::C3
-Source0:	http://www.cpan.org/modules/by-module/Class/%{upstream_name}-%{upstream_version}.tar.gz
+Source0:	http://www.cpan.org/modules/by-module/Class/%{upstream_name}-%{version}.tar.gz
 BuildArch:	noarch
 BuildRequires:	perl-devel
-BuildRequires:	perl(Algorithm::C3) >= 0.05
-BuildRequires:	perl(Scalar::Util) >= 1.10
-BuildRequires:	perl(Test::More) >= 0.47
-BuildRequires:	perl(Test::Exception) >= 0.15
-BuildRequires:	perl(Class::C3::XS) >= 0.07
+BuildRequires:	perl(Algorithm::C3)
+BuildRequires:	perl(Scalar::Util)
+BuildRequires:	perl(Test::More)
+BuildRequires:	perl(Test::Exception)
+BuildRequires:	perl(Class::C3::XS)
 Requires:	perl(Algorithm::C3)
 
 %description
@@ -24,17 +23,17 @@ from depth-first left-to-right (a.k.a - pre-order) to the more
 sophisticated C3 method resolution order.
 
 %prep
-%setup -qn %{upstream_name}-%{upstream_version}
+%autosetup -p1 -n %{upstream_name}-%{version}
 
 %build
 %__perl Makefile.PL INSTALLDIRS=vendor
-%make
+%make_build
 
 %check
 %make test
 
 %install
-%makeinstall_std
+%make_install
 
 %files
 %doc  README
